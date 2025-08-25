@@ -1,0 +1,7 @@
+{
+  "name": "valjo-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

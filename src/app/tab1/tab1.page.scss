@@ -1,0 +1,40 @@
+.video-card {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  border-radius: 16px;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.blur-overlay {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4); /* Optional: add tint */
+  padding: 1rem;
+  border-radius: 16px;
+  object-fit: cover;
+  color: white!important;
+  height: 600px;
+  justify-content: center;  /* Vertically center */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical center */
+  
+  height: 100%;            /* Ensure it fills the parent */
+  padding: 2rem;
+}
+
+.white-text {
+  color: white!important;
+}
