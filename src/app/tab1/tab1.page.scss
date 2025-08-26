@@ -40,5 +40,30 @@
 }
 
 ion-card-title {
-      font-size: 3rem !important; /* Adjust the pixel value as needed */
+  font-size: 3rem !important; /* Default for large screens */
 }
+
+.subtitleText {
+  font-size: 2rem !important;
+}
+
+/* Mobile devices (adjust breakpoint as needed) */
+@media (max-width: 768px) {
+  ion-card-title {
+    font-size: 1.8rem !important;
+  }
+  .subtitleText {
+    font-size: 1rem !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  ion-card-title {
+    font-size: 1.5rem !important;
+  }
+  .subtitleText {
+    display: none !important; /* Hide completely on extra small screens */
+  }
+}
+
