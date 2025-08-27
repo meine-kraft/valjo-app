@@ -35,7 +35,7 @@
   padding: 2rem;
 }
 
-ion-card-title {
+.titleText {
   font-size: 3rem !important; /* Default for large screens */
   color: white!important;
 }
@@ -46,7 +46,7 @@ ion-card-title {
 
 /* Mobile devices (adjust breakpoint as needed) */
 @media (max-width: 768px) {
-  ion-card-title {
+  .titleText {
     font-size: 1.8rem !important;
   }
   .subtitleText {
@@ -56,11 +56,147 @@ ion-card-title {
 
 /* Extra small devices */
 @media (max-width: 480px) {
-  ion-card-title {
+  .titleText {
     font-size: 1.5rem !important;
   }
   .subtitleText {
     display: none !important; /* Hide completely on extra small screens */
   }
 }
+/*Workflow section*/
+/* Base layout (same as before) */
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
 
+.step {
+  flex: 1 1 auto;
+  min-width: 150px;
+  max-width: 200px;
+  text-align: center;
+  opacity: 0; /* start hidden for animation */
+  transform: translateY(20px);
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  color: var(--ion-color-primary);
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.step-content h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.step-content p {
+  font-size: 0.85rem;
+  color: var(--ion-color-medium);
+}
+
+.step-connector {
+  font-size: 1.5rem;
+  color: var(--ion-color-medium);
+  margin: 0 0.5rem;
+  opacity: 0;
+}
+
+/* Mobile → vertical timeline */
+@media (max-width: 768px) {
+  .stepper {
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    padding: 0; /* Prevents extra padding */
+  }
+
+  .step {
+    width: 100%;
+    border: 4px solid var(--ion-color-primary);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background: #fff;
+    box-sizing: border-box;
+    margin: 0; /* remove extra margin */
+  }
+
+  .step-icon {
+    margin-right: 0.75rem;
+  }
+
+  .step-connector {
+    transform: rotate(90deg);
+    margin: -0.5rem 0 0.5rem 2.5rem;
+  }
+}
+
+/* 🔹 Animations */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-stepper .animate-step {
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.animate-stepper .animate-step:nth-child(1) { animation-delay: 1s; }
+.animate-stepper .animate-step:nth-child(3) { animation-delay: 1.6s; }
+.animate-stepper .animate-step:nth-child(5) { animation-delay: 2s; }
+.animate-stepper .animate-step:nth-child(7) { animation-delay: 2.4s; }
+.animate-stepper .animate-step:nth-child(9) { animation-delay: 2.8s; }
+.animate-stepper .animate-step:nth-child(11) { animation-delay: 3.2s; }
+
+.animate-stepper .animate-arrow {
+  animation: arrowBounce 1.2s infinite;
+  animation-delay: 0.4s;
+  opacity: 1;
+}
+
+/* Hover pulse for desktop */
+@media (hover: hover) {
+  .step-icon:hover {
+    transform: scale(1.15);
+  }
+}
+
+/*Guarantee section*/
+.guarantee-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.guarantee-icon {
+  font-size: 1.6rem;
+  color: var(--ion-color-primary);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.guarantee-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}

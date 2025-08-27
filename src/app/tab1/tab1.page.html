@@ -25,11 +25,11 @@
   <!-- Blur overlay -->
   <div class="blur-overlay" >
     <ion-card-header>
-      <ion-card-title class="" >Protege la identidad de tu negocio</ion-card-title>
+      <ion-card-title class="titleText" >Protege la identidad de tu negocio</ion-card-title>
       <ion-card-subtitle class="subtitleText">Registra tu marca</ion-card-subtitle>
     </ion-card-header>
 
-    <ion-card-content class="white-text">
+    <ion-card-content>
       Registrar tu marca es fundamental para asegurar la identidad de tus productos o servicios, manteniendo su exclusividad en el mercado. 
       <br>La ausencia de un registro formal permite que terceros hagan uso del mismo nombre o similar, lo que podrian generar conflictos y afectar a la reputación de tu negocio.
       <br>El registro brinda derechos exclusivos, facilita la expansión del negocio y refuerza la confianza hacia tus clientes. Más que un trámite, es una inversión estratégica que garantiza estabilidad y diferencia.
@@ -37,8 +37,123 @@
   </div>
 </ion-card>
 
+  <ion-card class="custom-background">
+    <ion-card-header>
+      <ion-card-title class="text-center text-xl">Proceso para el Registro de Marca</ion-card-title>
+    </ion-card-header>
 
-  <ion-card style="background: #f0f8ff;">
+    <ion-card-content>
+      <div class="stepper animate-stepper">
+        <!-- Step 1 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>1. Búsqueda y Análisis</h3>
+            <p>Examen de viabilidad y clasificación.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+           @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="document-text-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>2. Solicitud</h3>
+            <p>Llenado de solicitud y reglas de uso.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+          @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>3. Oposición</h3>
+            <p>1 mes desde la publicación.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+          @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="time-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>4. Exámenes</h3>
+            <p>Resolución de 2 a 6 meses.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+          @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="ribbon-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>5. Título</h3>
+            <p>Publicación en gaceta.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+          @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="cash-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>6. Reembolso</h3>
+            <p>Hasta 100% de lo invertido.</p>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
     <h1 class="ion-padding">¿Por qué elegirnos?</h1>
 
     <ion-accordion-group expand="inset">
@@ -120,90 +235,31 @@
     </ion-accordion-group>
   </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Proceso para el registro de marca</ion-card-title>
-      <ion-card-subtitle></ion-card-subtitle>
-    </ion-card-header>
+  <ion-card class="guarantee-card custom-background">
+  <ion-card-header>
+    <ion-card-title class="guarantee-title">
+      <ion-icon name="shield-checkmark-outline" class="guarantee-icon"></ion-icon>
+      Garantía de Reembolso
+    </ion-card-title>
+  </ion-card-header>
 
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-img src="assets/images/c33e91d4a4d5e2df784cd264b96db739.png"
-            style="width: 80px; height: auto; margin: auto;"></ion-img>
-            <b>1. Búsqueda y Análisis de Disponibilidad.</b>
-             <ul>
-              <li>Examen de Viabilidad: (Fonético, Interactivo y Figurativo).</li>
-              <li>Clasificación.</li>
-            </ul> 
-          </ion-col>
-          <ion-col>
-            <ion-img src="assets/images/5dc84ec7119a7a9fa760997b400928d1.png"
-            style="width: 80px; height: auto; margin: auto;"></ion-img>
-            <b>2. Presentación de la Solicitud.</b>
-            <ul>
-              <li>Clasificación.</li>
-              <li>Llenado de solicitud.</li>
-              <li>Contrato “Reglas de uso”.</li>
-              <li>Licencia de Uso.</li>
-            </ul> 
-          </ion-col>
-          <ion-col>
-            <ion-img src="assets/images/7b2fac130093fa7e1fb95e2bb45ff9a1.png"
-            style="width: 80px; height: auto; margin: auto;"></ion-img>
-            <b>3. Periodo de Oposición</b>
-            <ul>
-              <li>1 mes a partir de la fecha de publicación de la solicitud.</li>
+  <ion-card-content>
+    <p>
+      En <b>VALJO</b>, tu inversión está protegida.  
+      Si tu solicitud de <b>registro de marca no procede</b>, activamos nuestra 
+      <b>Garantía de Devolución</b> y reembolsamos el monto establecido por la garantía.
+    </p>
 
-            </ul> 
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-img src="assets/images/03ff79e525b5d9c34ee16098d93882cb.png"
-            style="width: 80px; height: auto; margin: auto;"></ion-img>
-            <b>4. Resolución de exámenes de Forma y Fondo.</b>
-              <ul>
-                <li>Periodo de 2 a 6 meses máximo.</li>
-              </ul> 
-          </ion-col>
-          <ion-col>
-            <ion-img src="assets/images/84e5612e2fd94271c6c37893772d1ef1.png"
-            style="width: 80px; height: auto; margin: auto;"></ion-img>
-            <b>5. Entrega del Título de Marca y Protección Legal.</b>
-              <ul>
-                <li>Publicación del titulo en gaceta.</li>
-              </ul> 
-          </ion-col>
-          <ion-col>
-            <ion-img src="assets/images/fb33a6fae0e4abeacbe9fe50ae58dafc.png"
-            style="width: 80px; height: auto; margin: auto;"></ion-img>
-            <b>Garantia de Reembolso.</b>
-              <ul>
-                <li>Hasta el 100% de lo que invertiste.</li>
-              </ul> 
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+    <h4>¿Cuándo aplica la devolución?</h4>
+    <ul>
+      <li>Cuando existen <b>impedimentos legales</b> (similitud con otra marca, términos genéricos, origen cultural, etc).</li>
+      <li>Si hay <b>errores en la solicitud</b> o documentos incompletos.</li>
+    </ul>
 
-  <ion-card style="background: #f0f8ff;">
-    <ion-card-header>
-      <ion-card-title>Garantia</ion-card-title>
-      <ion-card-subtitle></ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      La Devolución de Garantía por parte de VALJO ocurre cuando una solicitud de registro de marca no procede y el pago hecho por la garantía debe ser reembolsado. 
-      <br>Esto puede suceder si la marca es rechazada por:
-      <ul>
-        <li>Impedimentos legales (similitud con otra marca, términos genéricos, descriptivos, origen cultural, etc).</li>
-        <li>Errores en la solicitud o documentos incompletos.</li>
-        <li>Es importante aclarar que el IMPI no realiza devoluciones una vez que se realizo el pago y se ingresa la solicitud firmada.</li>
-      </ul>
-    </ion-card-content>
-      
-  </ion-card>
+    <ion-note color="danger" class="guarantee-note">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      Importante: el <b>IMPI</b> no realiza devoluciones una vez que se ingresó la solicitud firmada y pagada.
+    </ion-note>
+  </ion-card-content>
+</ion-card>
 </ion-content>

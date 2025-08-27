@@ -38,3 +38,18 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+/*Bckgrd color */
+.custom-background {
+  // Light mode background color
+  background: #f0f8ff!important;
+}
+
+/* This media query applies when the user's system is in dark mode */
+@media (prefers-color-scheme: dark) {
+  .custom-background {
+    // Dark mode background color
+    background: #111111!important; // A good dark gray or whatever color you prefer
+  }
+}
