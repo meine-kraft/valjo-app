@@ -200,3 +200,45 @@
   align-items: center;
   font-size: 1.2rem;
 }
+
+/*Contact section*/
+.ion-padding {
+        --ion-padding-top: 2rem;
+        --ion-padding-bottom: 2rem;
+      }
+
+      .ion-toolbar {
+        --background: #3b82f6;
+      }
+
+      .rounded-lg {
+        border-radius: 0.75rem;
+      }
+
+      .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Custom styling for ion-input focus */
+      ion-input.ion-touched.ion-valid.ion-focused {
+        --highlight-color: #3b82f6;
+      }
+
+      ion-item.ion-invalid {
+        border-color: #ef4444;
+      }
+
+      /* Custom styling for ion-textarea focus */
+      ion-textarea.ion-touched.ion-valid.ion-focused {
+        --highlight-color: #3b82f6;
+      }
+
+      .bg-gray-100 {
+        --background: #f3f4f6;
+      }
+
+      .ion-button[disabled] {
+        --background: #d1d5db;
+        --background-hover: #d1d5db;
+        opacity: 0.6;
+      }
