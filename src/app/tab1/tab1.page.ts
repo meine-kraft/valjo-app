@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { addIcons } from 'ionicons';
 import { createOutline, mailOutline, personOutline } from 'ionicons/icons';
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-tab1',
@@ -28,29 +29,29 @@ export class Tab1Page {
     // You can also check for specific OS
     // this.isMobileDevice = this.platform.is('ios') || this.platform.is('android');
 
-    // Add the ionicons to the library so they can be used in the template
-    addIcons({ mailOutline, personOutline, createOutline });
-
     // Initialize the reactive form with validation
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
+      nombre: ['', Validators.required],
+      telefono: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
+      mensaje: ['', Validators.required]
     });
+
   }
   
-  /**
-   * Handles the form submission.
-   */
   onSubmit(): void {
     if (this.contactForm.valid) {
-      console.log('Form Submitted!', this.contactForm.value);
-      // Here you would typically send the data to a backend service
-      // this.contactForm.reset();
-    } else {
-      // Mark all fields as touched to display validation errors
-      this.contactForm.markAllAsTouched();
-      console.log('Form is invalid.');
+      emailjs.send(
+        'service_ojr6yi3',
+        'template_txj1hfh',
+        this.contactForm.value,
+        'henG7eT7zI4RNW4Z7'
+      ).then(() => {
+        alert('Mensaje enviado ✅');
+      }).catch(() => {
+        alert('Error enviando ❌');
+      });
     }
+    
   }
 }

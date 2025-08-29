@@ -263,98 +263,47 @@
   </ion-card-content>
 </ion-card>
 
-  <ion-card class="rounded-lg shadow-lg">
-          <ion-card-header>
-            <ion-card-title class="text-xl md:text-2xl font-bold text-center text-gray-800 mb-2">
-              Contacto
-            </ion-card-title>
-            <ion-card-subtitle class="text-sm text-center text-gray-500">
-              Nos encantaría saber de ti. Completa el formulario y nos pondremos en contacto contigo pronto.
-            </ion-card-subtitle>
-          </ion-card-header>
-          <ion-card-content>
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-              <ion-list class="bg-white rounded-lg">
-                <!-- Name Input -->
-                <ion-item class="ion-margin-bottom rounded-lg" lines="none">
-                  <ion-icon slot="start" [name]="personOutline" class="text-blue-500"></ion-icon>
-                  <ion-input
-                    label="Nombre"
-                    labelPlacement="floating"
-                    formControlName="name"
-                    aria-label="Name"
-                    placeholder="Ingresa tu nombre"
-                    [class.ion-invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
-                  ></ion-input>
-                </ion-item>
-                <!-- Show error for name -->
-                @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
-                  <ion-item lines="none">
-                    <ion-label color="danger" class="text-xs ml-8">Tu nombre es requerido.</ion-label>
-                  </ion-item>
-                }
+<ion-card class="contact-card">
+  <ion-card-header>
+    <ion-card-title>Contacto</ion-card-title>
+    <ion-card-subtitle>Envíanos un mensaje y te responderemos pronto</ion-card-subtitle>
+  </ion-card-header>
 
-                <!-- Email Input -->
-                <ion-item class="ion-margin-bottom rounded-lg" lines="none">
-                  <ion-icon slot="start" [name]="mailOutline" class="text-blue-500"></ion-icon>
-                  <ion-input
-                    label="Email"
-                    labelPlacement="floating"
-                    type="email"
-                    formControlName="email"
-                    aria-label="Email"
-                    placeholder="Ingresa tu email"
-                    [class.ion-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
-                  ></ion-input>
-                </ion-item>
-                <!-- Show error for email -->
-                @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-                  <ion-item lines="none">
-                    <ion-label color="danger" class="text-xs ml-8">
-                      @if (contactForm.get('email')?.errors?.['required']) {
-                        Tu email es requerido.
-                      } @else if (contactForm.get('email')?.errors?.['email']) {
-                        Please enter a valid email.
-                      }
-                    </ion-label>
-                  </ion-item>
-                }
+  <ion-card-content>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- Nombre -->
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" formControlName="nombre" required></ion-input>
+      </ion-item>
 
-                <!-- Message Textarea -->
-                <ion-item class="ion-margin-bottom rounded-lg" lines="none">
-                  <ion-icon slot="start" [name]="createOutline" class="text-blue-500"></ion-icon>
-                  <ion-textarea
-                    label="Asunto"
-                    labelPlacement="floating"
-                    formControlName="message"
-                    aria-label="Message"
-                    rows="5"
-                    placeholder="Agrega tu mensaje"
-                    [class.ion-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
-                  ></ion-textarea>
-                </ion-item>
-                <!-- Show error for message -->
-                @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
-                  <ion-item lines="none">
-                    <ion-label color="danger" class="text-xs ml-8">Se requiere agregar un mensaje.</ion-label>
-                  </ion-item>
-                }
+      <!-- Teléfono -->
+      <ion-item>
+        <ion-label position="floating">Teléfono</ion-label>
+        <ion-input type="tel" formControlName="telefono" required></ion-input>
+      </ion-item>
 
-                <!-- Submit Button -->
-                <div class="mt-8">
-                  <ion-button
-                    expand="block"
-                    type="Enviar"
-                    [disabled]="!contactForm.valid"
-                    class="ion-margin-top rounded-full font-semibold transition-all duration-300"
-                    color="tertiary"
-                  >
-                    Enviar
-                  </ion-button>
-                </div>
-              </ion-list>
-            </form>
-          </ion-card-content>
-        </ion-card>
+      <!-- Email -->
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email" required></ion-input>
+      </ion-item>
+
+      <!-- Mensaje -->
+      <ion-item>
+        <ion-label position="floating">Mensaje</ion-label>
+        <ion-textarea formControlName="mensaje" rows="5" required></ion-textarea>
+      </ion-item>
+
+      <!-- Botón Enviar -->
+      <div class="form-actions">
+        <ion-button expand="block" type="submit" [disabled]="contactForm.invalid">
+          <ion-icon name="send-outline" slot="start"></ion-icon>
+          Enviar Mensaje
+        </ion-button>
+      </div>
+    </form>
+  </ion-card-content>
+</ion-card>
 
 </ion-content>
