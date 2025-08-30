@@ -5,15 +5,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Platform } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { addIcons } from 'ionicons';
 import { createOutline, mailOutline, personOutline } from 'ionicons/icons';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-  imports: [ReactiveFormsModule,IonInput, IonButton, IonTextarea, IonList, CommonModule, IonNote, IonIcon, IonAvatar, IonAccordionGroup, IonItem, IonAccordion, IonLabel, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, NgbModule],
+  imports: [ReactiveFormsModule,IonInput, IonButton, IonTextarea, CommonModule, IonNote, IonIcon, IonAvatar, IonAccordionGroup, IonItem, IonAccordion, IonLabel, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, NgbModule],
 })
 export class Tab1Page {
   isMobile = false;
