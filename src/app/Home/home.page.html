@@ -1,0 +1,344 @@
+  <ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-avatar slot="start">
+        <img src="assets/images/valjoLogo.png" alt="Logo" />
+      </ion-avatar>
+      <ion-title>Inicio - Valjo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button routerLink="/home" menuClose>
+        <ion-icon slot="start" name="home"></ion-icon>
+        Inicio
+      </ion-item>
+      <ion-item button routerLink="/about" menuClose>
+        <ion-icon slot="start" name="add-circle"></ion-icon>
+        Sobre Nosotros
+      </ion-item>
+      <ion-item button routerLink="/services" menuClose>
+        <ion-icon slot="start" name="library"></ion-icon>
+        Servicios
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+      <img height="auto" width="10%" src="assets/images/valjoLogo.png" alt="Logo" />
+      <ion-title>Inicio - Valjo</ion-title>
+    </ion-buttons>
+
+    <ion-buttons id="desktop-buttons" slot="end" class="desktop-only">
+      <ion-button fill="solid" [routerLink]="['/home']">
+        <ion-icon slot="start" name="home"></ion-icon>
+        Inicio
+      </ion-button>
+      <ion-button fill="solid" [routerLink]="['/about']">
+        <ion-icon slot="start" name="add-circle"></ion-icon>
+        Sobre Nosotros
+      </ion-button>
+      <ion-button fill="solid" [routerLink]="['/services']">
+        <ion-icon slot="start" name="library"></ion-icon>
+        Servicios
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content [fullscreen]="true" id ="main-content">
+ <ion-card class="video-card">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="assets/videos/teamWork.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Blur overlay -->
+  <div class="blur-overlay" >
+    <ion-card-header>
+      <ion-card-title class="titleText" >Protege la identidad de tu negocio</ion-card-title>
+      <ion-card-subtitle class="subtitleText">Registra tu marca</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Registrar tu marca es fundamental para asegurar la identidad de tus productos o servicios, manteniendo su exclusividad en el mercado. 
+      <br>La ausencia de un registro formal permite que terceros hagan uso del mismo nombre o similar, lo que podrian generar conflictos y afectar a la reputación de tu negocio.
+      <br>El registro brinda derechos exclusivos, facilita la expansión del negocio y refuerza la confianza hacia tus clientes. Más que un trámite, es una inversión estratégica que garantiza estabilidad y diferencia.
+    </ion-card-content>
+  </div>
+</ion-card>
+
+  <ion-card class="custom-background">
+    <ion-card-header>
+      <ion-card-title class="text-center text-xl">Proceso para el Registro de Marca</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="stepper animate-stepper">
+        <!-- Step 1 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>1. Búsqueda y Análisis</h3>
+            <p>Examen de viabilidad y clasificación.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+           @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="document-text-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>2. Solicitud</h3>
+            <p>Llenado de solicitud y reglas de uso.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+          @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>3. Oposición</h3>
+            <p>1 mes desde la publicación.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+          @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="time-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>4. Exámenes</h3>
+            <p>Resolución de 2 a 6 meses.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+          @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="ribbon-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>5. Título</h3>
+            <p>Publicación en gaceta.</p>
+          </div>
+        </div>
+
+        <div class="step-connector animate-arrow">
+          @if (isMobile) {
+            <br>
+          } @else {
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          }
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step animate-step">
+          <div class="step-icon">
+            <ion-icon name="cash-outline"></ion-icon>
+          </div>
+          <div class="step-content">
+            <h3>6. Reembolso</h3>
+            <p>Hasta 100% de lo invertido. <b>(Si aplicable)</b></p>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <h1 class="ion-padding">¿Por qué elegirnos?</h1>
+
+    <ion-accordion-group expand="inset">
+
+      <ion-accordion value="asesoria">
+        <ion-item slot="header">
+          <ion-label>Asesoría personalizada</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          No estás solo en este proceso. Nuestro equipo de expertos te guiará en cada etapa del registro, desde la búsqueda de disponibilidad, hasta la obtención del título de tu marca. 
+          Te explicamos todo de manera clara y sencilla para que tomes decisiones.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="proceso">
+        <ion-item slot="header">
+          <ion-label>Proceso ágil y eficiente</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Sabemos que el tiempo es valioso. Nos encargamos de todo el trámite legal para que no tengas que preocuparte por los detalles administrativos.
+          Nos aseguramos de que tu solicitud se presente correctamente y en el menor tiempo posible, para que puedas concentrarte en lo que realmente importa: hacer crecer tu negocio.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="seguimiento">
+        <ion-item slot="header">
+          <ion-label>Seguimiento constante</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Te mantenemos informado en cada etapa del proceso. Desde la presentación de la solicitud hasta la obtención del título, te brindamos actualizaciones periódicas para que estés al tanto del estado de tu registro.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="proteccion">
+        <ion-item slot="header">
+          <ion-label>Protección integral</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Nos aseguramos de que tu marca esté protegida en todos los aspectos legales. Realizamos un análisis exhaustivo para identificar posibles conflictos y te asesoramos sobre las mejores estrategias para proteger tu marca a largo plazo.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="precios">
+        <ion-item slot="header">
+          <ion-label>Precios competitivos</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Ofrecemos tarifas transparentes y competitivas, sin sorpresas ni costos ocultos. Sabemos que cada negocio es único, por eso adaptamos nuestros servicios a tus necesidades específicas.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="experiencia">
+        <ion-item slot="header">
+          <ion-label>Experiencia y confianza</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Contamos con un equipo de profesionales con amplia experiencia en el registro de marcas. Nos hemos ganado la confianza de nuestros clientes gracias a nuestro compromiso y dedicación en cada proyecto.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="valor">
+        <ion-item slot="header">
+          <ion-label>Valor agregado</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Más que un trámite, el registro de tu marca es una inversión estratégica. Te ayudamos a construir una identidad sólida y reconocible en el mercado, lo que te permitirá destacar frente a la competencia y generar confianza en tus clientes.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="soporte">
+        <ion-item slot="header">
+          <ion-label>Soporte post-registro</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Una vez que tu marca esté registrada, no te dejamos solo. Te ofrecemos soporte continuo para resolver cualquier duda o inquietud que puedas tener en el futuro. Estamos aquí para ayudarte a proteger y hacer crecer tu negocio.
+        </div>
+      </ion-accordion>
+
+    </ion-accordion-group>
+  </ion-card>
+
+  <ion-card class="guarantee-card custom-background">
+  <ion-card-header>
+    <ion-card-title class="guarantee-title">
+      <ion-icon name="shield-checkmark-outline" class="guarantee-icon"></ion-icon>
+      Garantía de Reembolso
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>
+      En <b>VALJO</b>, tu inversión está protegida.  
+      Si tu solicitud de <b>registro de marca no procede</b>, activamos nuestra 
+      <b>Garantía de Devolución</b> y reembolsamos el monto establecido por la garantía.
+    </p>
+
+    <h4>¿Cuándo aplica la devolución?</h4>
+    <ul>
+      <li>Cuando existen <b>impedimentos legales</b> (similitud con otra marca, términos genéricos, origen cultural, etc).</li>
+      <li>Si hay <b>errores en la solicitud</b> o documentos incompletos.</li>
+    </ul>
+
+    <ion-note color="danger" class="guarantee-note">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      Importante: el <b>IMPI</b> no realiza devoluciones una vez que se ingresó la solicitud firmada y pagada.
+    </ion-note>
+  </ion-card-content>
+</ion-card>
+
+<ion-card class="contact-card">
+  <ion-card-header>
+    <ion-card-title>Contacto</ion-card-title>
+    <ion-card-subtitle>Envíanos un mensaje y te responderemos pronto</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- Nombre -->
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" formControlName="nombre" required></ion-input>
+      </ion-item>
+
+      <!-- Teléfono -->
+      <ion-item>
+        <ion-label position="floating">Teléfono</ion-label>
+        <ion-input type="tel" formControlName="telefono" required></ion-input>
+      </ion-item>
+
+      <!-- Email -->
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email" required></ion-input>
+      </ion-item>
+
+      <!-- Mensaje -->
+      <ion-item>
+        <ion-label position="floating">Mensaje</ion-label>
+        <ion-textarea formControlName="mensaje" rows="5" required></ion-textarea>
+      </ion-item>
+
+      <!-- Botón Enviar -->
+      <div class="form-actions">
+        <ion-button expand="block" type="submit" [disabled]="contactForm.invalid">
+          <ion-icon name="send-outline" slot="start"></ion-icon>
+          Enviar Mensaje
+        </ion-button>
+      </div>
+    </form>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
