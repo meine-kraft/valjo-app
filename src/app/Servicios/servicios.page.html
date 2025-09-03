@@ -4,10 +4,10 @@
       <ion-avatar slot="start">
         <img src="assets/images/valjoLogo.png" alt="Logo" />
       </ion-avatar>
-      <ion-title>Servicios - Valjo</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
+    <ion-title>Servicios - Valjo</ion-title>
     <ion-list>
       <ion-item button routerLink="/home" menuClose>
         <ion-icon slot="start" name="home"></ion-icon>
@@ -30,9 +30,9 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="third"></ion-menu-button>
       <img height="auto" width="10%" src="assets/images/valjoLogo.png" alt="Logo" />
-      <ion-title>Servicios - Valjo</ion-title>
     </ion-buttons>
 
+    <ion-title class="toolbarTitle">Servicios - Valjo</ion-title>
     <ion-buttons id="desktop-buttons" slot="end" class="desktop-only">
       <ion-button fill="solid" [routerLink]="['/home']">
         <ion-icon slot="start" name="home"></ion-icon>
@@ -110,7 +110,7 @@
               </ion-item>
             </ion-list>
             <!--<ion-button>Comprar</ion-button> -->
-            <div id="paypal-button-container-estandar"></div>
+            <!--<div id="paypal-button-container-estandar"></div>-->
           </div>
         </ion-col>
 
@@ -189,7 +189,7 @@
               </ion-item>
             </ion-list>
             <!--<ion-button>Comprar</ion-button> -->
-            <div id="paypal-button-container-pro"></div>
+            <!--<div id="paypal-button-container-pro"></div>-->
           </div>
           
         </ion-col>
@@ -203,38 +203,37 @@
       <ion-card-subtitle></ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-<ion-grid>
-
-  <ion-row>
-    <ion-col size="4">
-      🔊 <strong>Fonético:</strong><br>
-      Compara la pronunciación con otras marcas para evitar similitudes.
-    </ion-col>
-    <ion-col size="4">
-      🔄 <strong>Interactivo:</strong><br>
-      Evalúa si la marca puede generar confusión en el mercado.
-    </ion-col>
-    <ion-col size="4">
-      🎨 <strong>Figurativo:</strong><br>
-      Revisa logotipos, colores o símbolos similares a otras marcas.
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col size="4">
-      📌 <strong>Ejemplo:</strong><br>
-      "Bix Cola" vs. "Big Cola".
-    </ion-col>
-    <ion-col size="4">
-      📌 <strong>Ejemplo:</strong><br>
-      "Apple Tech" podría chocar con "Apple".
-    </ion-col>
-    <ion-col size="4">
-      📌 <strong>Ejemplo:</strong><br>
-      Un logo con arcos dorados vs. McDonald's.
-    </ion-col>
-  </ion-row>
-</ion-grid>
-<p>Este examen ayuda a evitar rechazos y proteger la identidad de la marca. 🚀</p>
+      <ion-grid class="examples-grid">
+        <ion-row>
+          <ion-col size="12" size-md="4">
+            🔊 <strong>Fonético:</strong><br>
+            Compara la pronunciación con otras marcas para evitar similitudes.
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            🔄 <strong>Interactivo:</strong><br>
+            Evalúa si la marca puede generar confusión en el mercado.
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            🎨 <strong>Figurativo:</strong><br>
+            Revisa logotipos, colores o símbolos similares a otras marcas.
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" size-md="4">
+            📌 <strong>Ejemplo:</strong><br>
+            "Bix Cola" vs. "Big Cola".
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            📌 <strong>Ejemplo:</strong><br>
+            "Apple Tech" podría chocar con "Apple".
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            📌 <strong>Ejemplo:</strong><br>
+            Un logo con arcos dorados vs. McDonald's.
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <p>Este examen ayuda a evitar rechazos y proteger la identidad de la marca. 🚀</p>
     </ion-card-content>
   </ion-card>
   <ion-card >

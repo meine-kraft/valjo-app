@@ -1,9 +1,7 @@
   <ion-menu side="start" menuId="first" contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-avatar slot="start">
-        <img src="assets/images/valjoLogo.png" alt="Logo" />
-      </ion-avatar>
+      <img height="auto" width="10%" src="assets/images/valjoLogo.png" alt="Logo" />
       <ion-title>Inicio - Valjo</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -25,14 +23,13 @@
   </ion-content>
 </ion-menu>
 
-<ion-header [translucent]="true" >
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button menu="first"></ion-menu-button>
       <img height="auto" width="10%" src="assets/images/valjoLogo.png" alt="Logo" />
-      <ion-title>Inicio - Valjo</ion-title>
     </ion-buttons>
-
+    <ion-title class="toolbarTitle">Inicio - Valjo</ion-title>
     <ion-buttons id="desktop-buttons" slot="end" class="desktop-only">
       <ion-button fill="solid" [routerLink]="['/home']">
         <ion-icon slot="start" name="home"></ion-icon>
@@ -51,6 +48,10 @@
 </ion-header>
 <br>
 <ion-content [fullscreen]="true" id ="main-content">
+<ion-card class="banner-card">
+  <img src="assets/images/valjoBanner.png" alt="Banner Image" style="display: block;margin: auto;width: 50%;" />
+</ion-card>
+
  <ion-card class="video-card">
   <video autoplay muted loop playsinline class="background-video">
     <source src="assets/videos/teamWork.mp4" type="video/mp4" />

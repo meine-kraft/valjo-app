@@ -5,7 +5,7 @@ import { IonApp, IonRouterOutlet, IonToolbar, IonButtons, IonTitle, IonIcon, Ion
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [RouterModule,IonIcon, IonItem, IonHeader, IonApp, IonRouterOutlet, IonToolbar, IonButtons, IonMenuButton, IonAvatar, IonTitle, IonButton, IonMenu, IonContent, IonList]})
+  imports: [RouterModule, IonApp, IonRouterOutlet]})
 export class AppComponent {
   constructor() {}
 }

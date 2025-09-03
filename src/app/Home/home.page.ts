@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [RouterModule, IonMenu, IonMenuButton,IonList, IonButtons, ReactiveFormsModule,IonInput, IonButton, IonTextarea, CommonModule, IonNote, IonIcon, IonAvatar, IonAccordionGroup, IonItem, IonAccordion, IonLabel, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, NgbModule],
+  imports: [RouterModule, IonMenu, IonMenuButton,IonList, IonButtons, ReactiveFormsModule,IonInput, IonButton, IonTextarea, CommonModule, IonNote, IonIcon, IonAccordionGroup, IonItem, IonAccordion, IonLabel, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, NgbModule],
 })
 export class HomePage {
   isMobile = false;

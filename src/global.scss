@@ -62,13 +62,64 @@ html {
     }
 }
 
-@media (max-width: 767px) {
-  #desktop-buttons {
-    display: none;
+/* reduce space taken by ion-buttons in the toolbar */
+ion-toolbar {
+  --ion-toolbar-padding-start: 0;
+  --ion-toolbar-padding-end: 0;
+}
+
+/* tighten start/end button groups */
+ion-toolbar ion-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+/* compact individual buttons */
+ion-toolbar ion-buttons ion-button {
+  --padding-start: 0.35rem;
+  --padding-end: 0.35rem;
+  --padding-top: 0.22rem;
+  --padding-bottom: 0.22rem;
+  font-size: 0.9rem;
+  height: 34px;
+  min-width: 2.2rem; /* keeps icon visible */
+  white-space: nowrap;
+}
+
+/* make icons slightly smaller so text + icon fit better */
+ion-toolbar ion-buttons ion-button ion-icon {
+  font-size: 1rem;
+  margin-inline-end: 0.25rem;
+}
+
+/* ensure title can shrink and not be clipped */
+.toolbarTitle {
+  min-width: 0;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* on small screens hide desktop-only button group and reduce logo size */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
   }
-  ion-title {
+
+  ion-toolbar ion-buttons img {
+    width: 28px;
+    height: auto;
+  }
+  /* allow title to wrap on small screens */
+  .toolbarTitle {
+    //white-space: normal;
+    //line-height: 1.15;
     font-size: 1rem !important;  /* shrink the text */
     white-space: normal !important; /* allow wrapping */
     text-align: center; /* optional: center on mobile */
   }
+ 
 }
